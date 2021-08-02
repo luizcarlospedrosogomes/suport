@@ -1,3 +1,11 @@
-# suport
+# suport Lib
 
-lib para intregração de da api de suporte
+## call documentation
+
+## call api suport
+
+##  rec screen 
+
+## get console log
+
+## print screen
