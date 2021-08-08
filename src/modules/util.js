@@ -1,7 +1,7 @@
 
 const require = (url) =>{
         var script = document.createElement("script");  // create a script DOM node
-        script.src = url;  // set its src to the provided URL
+        script.src = window.apiSupport+url;  // set its src to the provided URL
         document.head.appendChild(script);  // add it to the end of the head section of the page (could change 'head' to 'body' to add it to the end of the body section instead)
     }
 
@@ -42,4 +42,19 @@ const logo = (clickAction) => {
     document.body.appendChild(div);   
 }
 
-export {require, screenShot, logo};
+const getBrowser = () => {
+   
+        var test = function(regexp) {return regexp.test(window.navigator.userAgent)}
+        switch (true) {
+            case test(/edg/i): return "Microsoft Edge";
+            case test(/trident/i): return "Microsoft Internet Explorer";
+            case test(/firefox|fxios/i): return "Mozilla Firefox";
+            case test(/opr\//i): return "Opera";
+            case test(/ucbrowser/i): return "UC Browser";
+            case test(/samsungbrowser/i): return "Samsung Browser";
+            case test(/chrome|chromium|crios/i): return "Google Chrome";
+            case test(/safari/i): return "Apple Safari";
+            default: return "Other";
+        }
+}
+export {require, screenShot, logo, getBrowser, saveAs};

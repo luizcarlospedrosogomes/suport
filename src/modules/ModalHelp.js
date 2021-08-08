@@ -1,4 +1,6 @@
 import {ButtonPrint} from './ButtonPrint.js';
+import {ButtonStart} from './Rec/ButtonStart.js';
+import {ButtonStop} from './Rec/ButtonStop.js';
 
 const cssModal = `  display: none; /* Hidden by default */
                     position: fixed; /* Stay in place */
@@ -47,6 +49,8 @@ const ModalHelper = () =>{
         divModalContent.appendChild(divModalSpanClose)
         divModalContent.appendChild(divModalTitle)
         divModalContent.appendChild(ButtonPrint());
+        divModalContent.appendChild(ButtonStart());
+        divModalContent.appendChild(ButtonStop());
         divModal.appendChild(divModalContent)
         document.body.appendChild(divModal);  
        

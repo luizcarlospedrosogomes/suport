@@ -1,9 +1,9 @@
 import {require, screenShot, logo} from "./modules/util.js";
 import {ModalHelper} from "./modules/ModalHelp.js";
 
-require("./modules/external/html2canvas.min.js");
-
 window.addEventListener("load", function(){
+    require("/modules/external/RecordRTC.min.js");
+    require("/modules/external/html2canvas.min.js");    
     console.log("SUPPORT conected")
     logo(ModalHelper)
    
